@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+:root {
+  /* Colors */
+  --dkcyan: hsl(185, 75%, 39%);
+  --vdkcyan: hsl(229, 23%, 23%);
+  --dkgrblue: hsl(227, 10%, 46%);
+  --dkgray: hsl(0, 0%, 59%);
+  --white: hsl(0, 0%, 100%);
+  /* Typography */
+  --ff-primary: "Kumbh Sans", sans-serif;
+  --fs-info: 1.125rem;
+  --fw-regular: 400;
+  --fw-bold: 700;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  background-color: var(--dkcyan);
+  font-family: var(--ff-primary);
+  background-image: url("./images/bg-pattern-top.svg"),
+    url("./images/bg-pattern-bottom.svg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: right 200px bottom 300px, left 150px top 250px;
+}
+
+@media screen and (min-width: 450px) {
+  body {
+    background-position: right 250px bottom 350px, left 200px top 300px;
+  }
+}
+
+@media screen and (min-width: 650px) {
+  body {
+    background-position: right 300px bottom 400px, left 250px top 350px;
+  }
+}
+
+@media screen and (min-width: 850px) {
+  body {
+    background-position: right 350px bottom 450px, left 300px top 400px;
+  }
+}
+
+@media screen and (min-width: 1050px) {
+  body {
+    background-position: right 600px bottom 450px, left 500px top 450px;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  body {
+    background-position: right 600px bottom 450px, left 600px top 450px;
+  }
+}
+
+.container {
+  width: 90%;
+  max-width: 400px;
+  margin: 9.375rem auto;
+  background-color: var(--white);
+  border-radius: 0.625rem;
+}
+
+/* profile and picture section */
+.profile .profile__image {
+  background-image: url("./images/bg-pattern-card.svg");
+  width: 100%;
+  min-height: 9rem;
+  border-radius: 0.625rem 0.625rem 0 0;
+}
+
+.profile {
+  position: relative;
+}
+
+.profile::after {
+  content: url("./images/image-victor.jpg");
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  height: 6.5625rem;
+  width: 6.5625rem;
+  border-radius: 50%;
+  border: 5px solid var(--white);
+}
+
+.profile .profile__text {
+  width: 100%;
+  min-height: 9rem;
+}
+
+.profile .profile__text .name,
+.profile .profile__text .city {
+  display: block;
+  text-align: center;
+}
+
+.profile .profile__text .name {
+  padding-top: 4rem;
+  padding-bottom: 0.5rem;
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-info);
+}
+
+.profile .profile__text span {
+  color: var(--dkgrblue);
+  font-weight: var(--fw-regular);
+}
+
+.profile .profile__text .city {
+  padding-bottom: 1.5625rem;
+  color: var(--dkgrblue);
+}
+
+/* Stats section */
+.stats {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 1.875rem;
+  padding-bottom: 1.5625rem;
+  border-top: 2px solid hsl(0, 0%, 80%);
+}
+
+.stats .followers,
+.stats .likes,
+.stats .photos {
+  width: 33.333%;
+  align-items: center;
+  text-align: center;
+}
+
+.stats .stats__number {
+  padding-bottom: 0.625rem;
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-info);
+  color: var(--vdkcyan);
+}
+
+.stats .stats__text {
+  color: var(--dkgray);
+  font-size: 0.75rem;
+  letter-spacing: 0.1rem;
+}
