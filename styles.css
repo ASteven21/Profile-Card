@@ -38,38 +38,10 @@ body {
   background-image: url("./images/bg-pattern-top.svg"),
     url("./images/bg-pattern-bottom.svg");
   background-repeat: no-repeat, no-repeat;
-  background-position: right 200px bottom 300px, left 150px top 250px;
+  background-position: right 50vw bottom 50vh, left 50vw top 50vh;
+  background-attachment: fixed, fixed;
 }
 
-@media screen and (min-width: 450px) {
-  body {
-    background-position: right 250px bottom 350px, left 200px top 300px;
-  }
-}
-
-@media screen and (min-width: 650px) {
-  body {
-    background-position: right 300px bottom 400px, left 250px top 350px;
-  }
-}
-
-@media screen and (min-width: 850px) {
-  body {
-    background-position: right 350px bottom 450px, left 300px top 400px;
-  }
-}
-
-@media screen and (min-width: 1050px) {
-  body {
-    background-position: right 600px bottom 450px, left 500px top 450px;
-  }
-}
-
-@media screen and (min-width: 1300px) {
-  body {
-    background-position: right 600px bottom 450px, left 600px top 450px;
-  }
-}
 
 .container {
   width: 90%;
